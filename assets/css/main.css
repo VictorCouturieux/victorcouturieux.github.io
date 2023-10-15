@@ -4,6 +4,17 @@
 	my part
 */
 /*title*/
+.text-left{text-align:left}
+.text-right{text-align:right}
+.text-center{text-align:center}
+
+.item-center {
+	display: flex;
+	align-items: center;
+  justify-content: center;
+	align-items: center;
+}
+
 #head .title {
   font-family: Alice, Georgia, serif;
   font-size: 49px;
