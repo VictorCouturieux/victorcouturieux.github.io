@@ -4,16 +4,6 @@
 	my part
 */
 /*title*/
-#section .text-left{text-align:left}
-#section .text-right{text-align:right}
-#section .text-center{text-align:center}
-
-#section .item-center {
-	display: flex;
-	align-items: center;
-  justify-content: center;
-	align-items: center;
-}
 
 #head .title {
   font-family: Alice, Georgia, serif;
@@ -2981,3 +2971,15 @@ input, select, textarea {
 			}
 
 	}
+
+
+section .text-left{text-align:left}
+section .text-right{text-align:right}
+section .text-center{text-align:center}
+
+section .item-center {
+	display: flex;
+	align-items: center;
+  justify-content: center;
+	align-items: center;
+}
