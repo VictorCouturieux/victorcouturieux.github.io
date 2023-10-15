@@ -1586,6 +1586,16 @@ input, select, textarea {
 	section, article {
 		margin-bottom: 2.5em;
 	}
+	section .text-left{text-align:left}
+	section .text-right{text-align:right}
+	section .text-center{text-align:center}
+
+	section .item-center {
+		display: flex;
+		align-items: center;
+	  justify-content: center;
+		align-items: center;
+	}
 
 		section > :last-child, section:last-child, article > :last-child, article:last-child {
 			margin-bottom: 0;
@@ -2971,15 +2981,3 @@ input, select, textarea {
 			}
 
 	}
-
-
-section .text-left{text-align:left}
-section .text-right{text-align:right}
-section .text-center{text-align:center}
-
-section .item-center {
-	display: flex;
-	align-items: center;
-  justify-content: center;
-	align-items: center;
-}
