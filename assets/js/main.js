@@ -81,22 +81,30 @@
 	}
 
 	var clickableImages = document.getElementsByClassName('clickable-image');
-	for (var i = 0; i < clickableImages.length; i++) {
-		clickableImages[i].addEventListener('click', function() {
-	    var imageSrc = this.getAttribute('data-image');
-	    openModal(imageSrc);
-	  });
+
+	window.onclick = function(event) {
+		if (event.target == closeModalButton || event.target == modal) {
+			closeModal();
+		}
+		for (var i = 0; i < clickableImages.length; i++) {
+			if (event.target == clickableImages[i]) {
+				var imageSrc = clickableImages[i].getAttribute('data-image');
+				openModal(imageSrc);
+			}
+		}
 	}
 
-	closeModalButton.addEventListener('click', function() {
+	/*closeModalButton.addEventListener('click', function() {
 	  closeModal();
 	});
+
+
 
 	window.addEventListener('click', function(event) {
 	  if (event.target == modal) {
 	    closeModal();
 	  }
-	});
+	});*/
 
 
 
