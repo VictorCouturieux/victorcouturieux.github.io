@@ -6,41 +6,6 @@
 
 (function($) {
 
-
-	var modal = document.getElementById('modal');
-	var modalImage = document.getElementById('modal-image');
-	var closeModalButton = document.getElementById('close');
-
-	// Function to show the modal
-	function openModal(imageSrc) {
-	  modalImage.src = imageSrc;
-	  modal.style.display = 'block';
-	}
-
-	// Function to close the modal
-	function closeModal() {
-	  modal.style.display = 'none';
-	}
-
-	var clickableImages = document.getElementsByClassName('clickable-image');
-	for (var i = 0; i < clickableImages.length; i++) {
-		clickableImages[i].addEventListener('click', function() {
-	    var imageSrc = this.getAttribute('data-image');
-	    openModal(imageSrc);
-	  });
-	}
-
-	closeModalButton.addEventListener('click', function() {
-	  closeModal();
-	});
-
-	window.addEventListener('click', function(event) {
-	  if (event.target == modal) {
-	    closeModal();
-	  }
-	});
-
-
 ///////////////// importing JS template
 
 	var	$window = $(window),
@@ -97,6 +62,41 @@
 					target: $body,
 					visibleClass: 'navPanel-visible'
 				});
+
+///////////////// My JS Script
+
+	var modal = document.getElementById('modal');
+	var modalImage = document.getElementById('modal-image');
+	var closeModalButton = document.getElementById('close');
+
+	// Function to show the modal
+	function openModal(imageSrc) {
+	  modalImage.src = imageSrc;
+	  modal.style.display = 'block';
+	}
+
+	// Function to close the modal
+	function closeModal() {
+	  modal.style.display = 'none';
+	}
+
+	var clickableImages = document.getElementsByClassName('clickable-image');
+	for (var i = 0; i < clickableImages.length; i++) {
+		clickableImages[i].addEventListener('click', function() {
+	    var imageSrc = this.getAttribute('data-image');
+	    openModal(imageSrc);
+	  });
+	}
+
+	closeModalButton.addEventListener('click', function() {
+	  closeModal();
+	});
+
+	window.addEventListener('click', function(event) {
+	  if (event.target == modal) {
+	    closeModal();
+	  }
+	});
 
 
 
