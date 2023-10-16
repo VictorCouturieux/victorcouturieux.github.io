@@ -49,11 +49,16 @@
   background-size: cover;
   background-position: center;
   overflow: hidden;
+  border: 9px solid rgba(0, 0, 0, 0.2);
+  margin: 0 auto;
+  border-radius: 50%; /* Creates a circular shape */
+  margin: 0 auto;
+}
+.circular-big-image {
+  overflow: hidden;
   border: 9px solid rgba(0, 0, 0, 0.05);
   margin: 0 auto;
   border-radius: 50%; /* Creates a circular shape */
-  border: 9px solid rgba(0, 0, 0, 0.05);
-  margin: 0 auto;
 }
 
 
@@ -1596,7 +1601,7 @@ input, select, textarea {
 	  justify-content: center;
 		align-items: center;
 	}
-
+	
 		section > :last-child, section:last-child, article > :last-child, article:last-child {
 			margin-bottom: 0;
 		}
@@ -1955,6 +1960,11 @@ input, select, textarea {
 				padding-top: 0;
 			}
 
+/* list */
+	ul.list li {
+		font-size: 1.25em;
+	}
+
 /* Social */
 
 	ul.social {
@@ -1962,7 +1972,7 @@ input, select, textarea {
 		padding-left: 0;
 		overflow: hidden;
 		cursor: default;
-		margin: 0 0 3.25em 0;
+		margin: 0 0 1.25em 0;/*margin: 0 0 3.25em 0;*/
 	}
 
 		ul.social li {
