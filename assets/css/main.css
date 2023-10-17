@@ -1659,6 +1659,18 @@ input, select, textarea {
 		align-items: center;
 	}
 
+	section .resize-iframe {
+		display: flex;
+		align-items: center;
+	  justify-content: center;
+		align-items: center;
+		margin: 1em 0 0 0
+	}
+
+	#hiddenContainer {
+	  display: none; /* Hide the container by default */
+	}
+
 		section > :last-child, section:last-child, article > :last-child, article:last-child {
 			margin-bottom: 0;
 		}

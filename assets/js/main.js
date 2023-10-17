@@ -82,30 +82,28 @@
 
 	var clickableImages = document.getElementsByClassName('clickable-image');
 
+	const toggleButton = document.getElementById("toggleButton");
+    const hiddenContainer = document.getElementById("hiddenContainer");
+
 	window.onclick = function(event) {
 		if (event.target == closeModalButton || event.target == modal) {
 			closeModal();
-		}
-		for (var i = 0; i < clickableImages.length; i++) {
-			if (event.target == clickableImages[i]) {
-				var imageSrc = clickableImages[i].getAttribute('data-image');
-				openModal(imageSrc);
+		} else if (event.target == toggleButton) {
+			if (hiddenContainer.style.display === "none" || hiddenContainer.style.display === "") {
+				hiddenContainer.style.display = "block"; // Show the container
+				toggleButton.textContent = "Hide Slides";
+			} else {
+				hiddenContainer.style.display = "none"; // Hide the container
+				toggleButton.textContent = "Show Slides";
+			}
+		} else {
+			for (var i = 0; i < clickableImages.length; i++) {
+				if (event.target == clickableImages[i]) {
+					var imageSrc = clickableImages[i].getAttribute('data-image');
+					openModal(imageSrc);
+				}
 			}
 		}
 	}
-
-	/*closeModalButton.addEventListener('click', function() {
-	  closeModal();
-	});
-
-
-
-	window.addEventListener('click', function(event) {
-	  if (event.target == modal) {
-	    closeModal();
-	  }
-	});*/
-
-
 
 })(jQuery);
