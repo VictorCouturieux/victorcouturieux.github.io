@@ -82,21 +82,32 @@
 
 	var clickableImages = document.getElementsByClassName('clickable-image');
 
-	const toggleButton = document.getElementById("toggleButton");
-    const hiddenContainer = document.getElementById("hiddenContainer");
+	const toggleButtons = document.getElementsByClassName("toggle-button");
+
+    const triangleRight = '&blacktriangleright;';
+    const triangleDown = '&blacktriangledown;';
+
 
 	window.onclick = function(event) {
 		if (event.target == closeModalButton || event.target == modal) {
 			closeModal();
-		} else if (event.target == toggleButton) {
-			if (hiddenContainer.style.display === "none" || hiddenContainer.style.display === "") {
-				hiddenContainer.style.display = "block"; // Show the container
-				toggleButton.textContent = "Hide Slides";
-			} else {
-				hiddenContainer.style.display = "none"; // Hide the container
-				toggleButton.textContent = "Show Slides";
+		}
+		else {
+			for (var i = 0; i < toggleButtons.length; i++) {
+				if (event.target == toggleButtons[i]) {
+					const targetId = toggleButtons[i].getAttribute('data-target');
+					const hiddenContainer = document.getElementById(targetId);
+					const customWord = toggleButtons[i].getAttribute('data-word');
+					if (hiddenContainer.style.display === "none" || 
+						hiddenContainer.style.display === "") {
+						hiddenContainer.style.display = "block"; // Show the container
+						toggleButtons[i].textContent = "Hide " + customWord + " \u25BC";
+					} else {
+						hiddenContainer.style.display = "none"; // Hide the container
+						toggleButtons[i].textContent = "Show " + customWord + " \u25B6";
+					}
+				}
 			}
-		} else {
 			for (var i = 0; i < clickableImages.length; i++) {
 				if (event.target == clickableImages[i]) {
 					var imageSrc = clickableImages[i].getAttribute('data-image');

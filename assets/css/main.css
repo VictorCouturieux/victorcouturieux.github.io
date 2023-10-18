@@ -1667,7 +1667,11 @@ input, select, textarea {
 		margin: 1em 0 0 0
 	}
 
-	#hiddenContainer {
+	section .hidden-container {
+	  display: none; /* Hide the container by default */
+	}
+
+	#hiddenContainerRessources1 {
 	  display: none; /* Hide the container by default */
 	}
 
