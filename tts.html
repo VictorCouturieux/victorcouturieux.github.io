@@ -117,36 +117,36 @@
 												<li><a target="_blank" href="https://www.bilibili.com/video/BV1PR4y1Z74e/?share_source=copy_web&vd_source=26cb85417ffe3140f31edb42c19b67ab">interactive-world tutorial video on Bilibili</a></li>
 											</ul>
 											<p style="margin: 1em 0 0 0;">Using this plugin as a source of inspiration, I developed a tool for interacting with snowy terrains. I also created a step-by-step documentation for the integration and modification of these terrains to make the process easier for the entire team.</p>
-
-											<p class="text-center" style="font-size: 20px; margin: 6px 0 0 0;">To see inital pitch slides. (in french for now) <br> <button class="button alt toggle-button" data-target="hiddenContainer2" data-word="Gif list" style="font-size: 0.9em; margin: 6px 0 0 0;">Show Gif list ▶</button> </p>
+											<button class="button alt toggle-button" data-target="hiddenContainer2" data-word="Image list" style="font-size: 0.9em; margin: 6px 0 0 0;">Show Image list ▶</button> 
 											<div class="hidden-container" id="hiddenContainer2">
-												<p class="resize-iframe"><iframe src="https://docs.google.com/presentation/d/e/2PACX-1vTFZNoEVNmQ6tX_pTyTyOCJMjhU1XiZLMDBF5tWer43-Lf8srFkwEAybHh7TmUmattBEbrxEgMUcLPf/embed?start=false&loop=false&delayms=3000" frameborder="0" width="640" height="389" allowfullscreen="true" mozallowfullscreen="true" webkitallowfullscreen="true"></iframe></p>
-											<div>
+												<p class="resize-iframe">
+													<iframe src="https://docs.google.com/presentation/d/e/2PACX-1vTFZNoEVNmQ6tX_pTyTyOCJMjhU1XiZLMDBF5tWer43-Lf8srFkwEAybHh7TmUmattBEbrxEgMUcLPf/embed?start=false&loop=false&delayms=3000" frameborder="0" width="640" height="389" allowfullscreen="true" mozallowfullscreen="true" webkitallowfullscreen="true"></iframe>
+												</p>
+											</div>
+											<h5 style="margin: 1em 0 0 0;">Improvement Note : </h5>
+											<p style="margin: 0 0 0 0;">To make the snow more realistic, it would have been relevant to add a particle system that reacts when the character controller moves through a layer of snow.</p>
 										</section>
 									</article>
-
 									<article class="box">
-										
 										<section>
 											<header>
-												<h3 style="margin: -0.9em 0 0 0;">Something else</h3>
+												<h3 style="margin: -0.9em 0 0 0;">Cameras Behaviour</h3>
 											</header>
-											<p>
-												Elementum odio duis semper risus et lectus commodo fringilla. Maecenas sagittis convallis justo vel mattis.
-												placerat, nunc diam iaculis massa, et aliquet nibh leo non nisl vitae porta lobortis, enim neque fringilla nunc,
-												eget faucibus lacus sem quis nunc suspendisse nec lectus sit amet augue rutrum vulputate ut ut mi. Aenean
-												elementum, mi sit amet porttitor lorem ipsum dolor sit amet, consectetur adipiscing elit. Lorem ipsum dolor
-												sit amet nullam consequat feugiat dolore tempus.
-											</p>
-											<ul>
-												<li>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Necessitatibus!</li>
-												<li>Laboriosam, aliquam totam asperiores nam velit voluptatum non quidem.</li>
-												<li>Voluptatem, libero quia voluptatum ab modi facere dolore assumenda?</li>
-												<li>Expedita, officia tenetur doloremque nulla temporibus ab voluptates adipisci.</li>
-												<li>Nostrum, nesciunt, inventore amet temporibus officia perferendis doloremque nulla.</li>
-												<li>Dolorum, ex earum maiores perspiciatis modi sequi odit mollitia.</li>
-											</ul>
-											
+											<p style="margin-bottom: 0;">During development, I learned a lot about how to handle the camera in many ways. In our game "Through the snow", The camera is not attached to our character. Instead, it consists of multiple static points of view, dispatched in the levels. Moreover, all the cameras can smoothly transition between one another. I researched some techniques that allow us to achieve that smooth transition. With the help of our research, we managed to make a camera tool who serves the narration and highlight environment.</p>
+											<button class="button alt toggle-button" data-target="hiddenContainer3" data-word="Image list" style="font-size: 0.9em; margin: 6px 0 0;">Show Image list ▶</button> 
+											<div class="hidden-container" id="hiddenContainer3">
+												<p style="display: flex; margin: 6px 0 0 0;">
+													<iframe src="https://docs.google.com/presentation/d/e/2PACX-1vTLq6hOtqfbRbaX-4DcX7JT0SjmsqN3gimNscCXehvultNg3GaxLW083_JTu35QEiLD4PjgE2QIy7Lw/embed?start=false&loop=false&delayms=3000" frameborder="0" width="480" height="299" allowfullscreen="true" mozallowfullscreen="true" webkitallowfullscreen="true"></iframe>
+												</p>
+											</div>
+											<h5 style="margin: 1em 0 0 0;">Improvement Note : </h5>
+											<p style="margin: 0 0 0 0;">At present, if I were to revise the game's camera behavior, I would opt for a system that tracks the player's position in the level, allowing the camera to move automatically, much like what is observed in the game "Bramble, The Mountain King"</p>
+											<button class="button alt toggle-button" data-target="hiddenContainer4" data-word="Camera Behavior from Bramble" style="font-size: 0.9em; margin: 6px 0 0;">Show Camera Behavior from Bramble ▶</button> 
+											<div class="hidden-container" id="hiddenContainer4">
+												<p style="display: flex; margin: 6px 0 0 0;">
+													<img src="images\tts\BrambleCameraBehaviour.gif">
+												</p>
+											</div>
 										</section>
 									</article>
 
