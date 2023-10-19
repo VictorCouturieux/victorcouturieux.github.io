@@ -72,6 +72,8 @@
 								<header class="text-center">
 									<p style="margin: -1.4em 0 0 0;">January, 2023</p>
 									<h2>RANDOM FOREST GENERATOR</h2>
+									<p>This page highlights my ongoing features experimentation with random natural environment generation in Unity.</p>
+									<iframe style="height: auto; max-width: 100%;" src="https://youtu.be/Tks2JuGWwAM" frameborder="0" allowfullscreen></iframe>
 								</header>
 								<!--a href="#" class="image"><img src="images/tts/tts_pano.png" alt="" /></a-->
 							</article>
@@ -82,23 +84,23 @@
 									<article class="box">
 										<section>
 											<header>
-												<p style="margin: -0.9em 0 0 0;">WebPage Under Construction</p>
-												<h2>Developpment</h2>
+												<!--p style="margin: -0.9em 0 0 0;">WebPage Under Construction</p-->
+												<h2>Creation of a random natural environment</h2>
 											</header>
-											<p>
-												Vestibulum scelerisque ultricies libero id hendrerit. Vivamus malesuada quam faucibus ante dignissim auctor
-												hendrerit libero placerat. Nulla facilisi. Proin aliquam felis non arcu molestie at accumsan turpis commodo.
-												Proin elementum, nibh non egestas sodales, augue quam aliquet est, id egestas diam justo adipiscing ante.
-												Pellentesque tempus nulla non urna eleifend ut ultrices nisi faucibus.
-											</p>
-											<blockquote>
-												Praesent a dolor leo. Duis in felis in tortor lobortis volutpat et pretium tellus. Vestibulum ac ante nisl,
-												a elementum odio. Duis semper risus et lectus commodo fringilla. Maecenas sagittis convallis justo vel mattis.
-												placerat, nunc diam iaculis massa, et aliquet nibh leo non nisl vitae porta lobortis, enim neque fringilla nunc,
-												eget faucibus lacus sem quis nunc suspendisse nec lectus sit amet augue rutrum vulputate ut ut mi. Aenean
-												elementum, mi sit amet porttitor lorem ipsum dolor sit amet, consectetur adipiscing elit. Lorem ipsum dolor
-												sit amet nullam consequat feugiat dolore tempus.
-											</blockquote>
+											<ul style="margin: 0 0 0 0;">
+												<li>Tree: Using Unity's 'Tree' module;</li>
+												<li>Grass, bushes, fern, and mushroom: Integration of assets with texture shaders (shader graph) and LOD on 3D models.</li>
+												<li>Ground: Application of Shader Graph to a relief ground texture. </li>
+												<li> Wind animation on the elements is managed using a 'Wind Zone' for trees and through shaders for the other elements.</li>
+											</ul>
+											<p></p>
+											<button class="button alt toggle-button" data-target="hiddenContainer1" data-word="Shaders Graph List" style="font-size: 0.9em; margin: 6px 0 0;">Show Image list ▶</button> 
+											<div class="hidden-container" id="hiddenContainer1">
+												<p class="item-center" style="display: flex; margin: 6px 0 0 0;">
+													<iframe src="https://docs.google.com/presentation/d/e/2PACX-1vTDS5STmJnx3vgnGK_I3ybodMFO46MRzSWMwpEBtHz20B4pdvFUSS3ACM7V2_r_2zFG8jNJgu8UbpgS/embed?start=false&loop=false&delayms=3000" frameborder="0" width="640" height="389" allowfullscreen="true" mozallowfullscreen="true" webkitallowfullscreen="true"></iframe>
+												</p>
+											</div>
+											
 										</section>
 										<section>
 											<header>
@@ -127,12 +129,13 @@
 
 								<!-- Sidebar -->
 									<section class="box">
-										<p  class="item-center" ><img src="images/rnd_forest/expl2.png" alt="Click to Enlarge" class="clickable-image" data-image="images/rnd_forest/expl2.png"></p>
+										<p  class="item-center" ><img src="images/rnd_forest/mushrooms.png" alt="Click to Enlarge" class="clickable-image" data-image="images/rnd_forest/mushrooms.png"></p>
+										<p  class="item-center" ><img src="images/rnd_forest/lod.png" alt="Click to Enlarge" class="clickable-image" data-image="images/rnd_forest/lod.png"></p>
 									</section>
 									<div id="modal" class="modal">
 									    <div class="modal-content">
 											<span class="close" id="close">&times;</span>
-											<img id="modal-image" src="images/rnd_forest/expl2.png" alt="Enlarged Image" class="modal-image">
+											<img id="modal-image" src="images/rnd_forest/mushrooms.png" alt="Enlarged Image" class="modal-image">
 										</div>
 									</div>
 							</div>
