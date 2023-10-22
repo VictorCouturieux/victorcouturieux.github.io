@@ -74,7 +74,7 @@
 									<h2>MADE A GAME WITH NETWORK API</h2>
 									<!--p style="font-size: 1.8em;">Adelia Rush</p-->
 								</header>
-								<a href="#" class="image item-center"><img src="images/adelia_rush/adelia_rush.png" alt="" /></a>
+								<a href="https://team-adelia.itch.io/adelia-rush" class="image item-center"><img src="images/adelia_rush/adelia_rush.png" alt="" /></a>
 							</article>
 
 						<div class="row">
@@ -86,33 +86,60 @@
 												<!--p style="margin: -0.9em 0 0 0;">WebPage Under Construction</p-->
 												<h2>Project Context</h2>
 											</header>
-											<p style="margin: 0 0 0 0">
-												During my first year at Cnam engineering school, I undertook this networked game project in collaboration with two of my fellow engineering classmates and two students from a graphic design school.
+											<p style="margin: 0 0 0 0; text-align: justify;">
+												The Adelia Rush project is a multiplayer cooperative video game developed during my first year at Cnam engineering school, I undertook this networked game project in collaboration with two of my fellow engineering classmates and two students from a graphic design school. It takes inspiration from the 'Shut Them Up' style of game, where players must control a flying boat by independently moving their characters inside it.
 											</p>
 											<a style="margin: 0 0 0 0" href="https://team-adelia.itch.io/adelia-rush">Download game page</a>
 											<blockquote>
-												In this online cooperative game with four players. You need manage your ship to overcome the dangers crossing the sky.
+												In this online cooperative game with four players. You need manage your flying boat to overcome the dangers crossing the sky.
 											</blockquote>
 										</section>
+									</article>
+									<article class="box">
 										<section>
 											<header>
-												<h3 style="margin: -0.9em 0 0 0;">Technical Online Aspects Developed</h3>
+												<h2>Technical Online Aspects Developed</h2>
 											</header>
-											<p>
-												Elementum odio duis semper risus et lectus commodo fringilla. Maecenas sagittis convallis justo vel mattis.
-												placerat, nunc diam iaculis massa, et aliquet nibh leo non nisl vitae porta lobortis, enim neque fringilla nunc,
-												eget faucibus lacus sem quis nunc suspendisse nec lectus sit amet augue rutrum vulputate ut ut mi. Aenean
-												elementum, mi sit amet porttitor lorem ipsum dolor sit amet, consectetur adipiscing elit. Lorem ipsum dolor
-												sit amet nullam consequat feugiat dolore tempus.
+											<p style="margin: 0 0 0 0; text-align: justify;">
+												My primary role in the development of this game was networking and synchronizing the interactive game world. I designed the game's network communication architecture, enabling players to join and play simultaneously. To create the game, we used the Unity software, which provides several networking libraries. For the networking aspect of the game, we chose the 'PHOTON Network' technology because, at the time of game development, it was well-documented on the internet and appeared to be suitable for our needs.
 											</p>
-											<ul>
-												<li>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Necessitatibus!</li>
-												<li>Laboriosam, aliquam totam asperiores nam velit voluptatum non quidem.</li>
-												<li>Voluptatem, libero quia voluptatum ab modi facere dolore assumenda?</li>
-												<li>Expedita, officia tenetur doloremque nulla temporibus ab voluptates adipisci.</li>
-												<li>Nostrum, nesciunt, inventore amet temporibus officia perferendis doloremque nulla.</li>
-												<li>Dolorum, ex earum maiores perspiciatis modi sequi odit mollitia.</li>
-											</ul>
+											<p style="margin: 6px 0 0 0;"><i>Watch a short presentation I made to assist upcoming student cohorts with their projects.</i></p>
+											<button class="button alt toggle-button" data-target="hiddenContainer1" data-word="My Slides Presentation of Photon" style="font-size: 0.9em; margin: 3px 0 0 0;">Show My Slides Presentation of Photon ▶</button> 
+											<div class="hidden-container" id="hiddenContainer1">
+												<p class="resize-iframe">
+													<iframe src="https://docs.google.com/presentation/d/e/2PACX-1vTdGlVZmUep4Cq8r6268GaCiZxTfhltfyNbSXRjhuwjEkLDe9b5tnByzvehZroqpeKnZKTI2mCL9HOe/embed?start=false&loop=false&delayms=3000" frameborder="0" width="640" height="389" allowfullscreen="true" mozallowfullscreen="true" webkitallowfullscreen="true"></iframe>
+												</p>
+											</div>
+											<h3 style="margin: 36px 0 0 0;">My PHOTON Network experience</h3>
+											<h4 style="margin: 0 0 0 0;">Player characters</h4>
+											<p style="margin: 0 0 0 0; text-align: justify;">
+												PHOTON Network provides information transaction servers where users can create rooms for player connections. Within these rooms, players can interact and share information. Furthermore, I was able to utilize the various information-sharing methods offered by PHOTON, including continuous data streaming to track player movements or simultaneously broadcast specific information to all players.
+											</p>
+											<p style="margin: 9px 0 0 0; text-align: justify;">
+												Player characters are instantiated locally within the game scene, but they share their information over the network. Player movement is continuously synchronized in the game for each of them, facilitated by the use of the User Datagram Protocol (UDP), ensuring smooth network processes in the game. However, it should be noted that this protocol does not provide security for transmitted information, which can occasionally lead to data loss.
+											</p>
+											<p style="margin: 9px 0 0 0; text-align: justify;">
+												A significant amount of information is sent simultaneously by all players. To minimize the volume of data being transmitted, I opted to condense these data into an array of values that I transmit via a network bus. This approach helps reduce the data load. My value array consists of floating-point numbers encoded in 4 bytes, which significantly reduces the size of the transmitted information.
+											</p>
+											<p style="margin: 9px 0 0 0; text-align: justify;">
+												In addition to sending real-time character movement data, players have the option to perform a quick forward movement maneuver, which we refer to as 'Dash.' This action is synchronized using a method called RPC (Remote Procedure Call). These special methods enable the simultaneous invocation of a function on every player's screen.
+											</p>
+											<p style="margin: 9px 0 0 0; text-align: justify;">
+												RPC functions similarly to the TCP (Transmission Control Protocol), which ensures the reliable delivery of data to its recipient. In the same game room, everyone effectively executes the same function, minimizing network overhead as it only conveys small amounts of information. Consequently, even if it may be sent multiple times, it doesn't burden the network.
+											</p>
+											<h4 style="margin: 10px 0 0 0;">Flying Boat</h4>
+											<p style="margin: 0 0 0 0; text-align: justify;">
+												To move the flying boat, a player must interact with an in-world placed lateral movement button. This interaction needs to be network synchronized to facilitate the movement of the flying boat and the players inside. This task proved to be challenging as it introduced disruptive visual issues for the players. I conducted multiple tests that eventually led to a functional solution.
+											</p>
+											<p style="margin: 9px 0 0 0; text-align: justify;">
+												Character movement within a shared local environment is relatively straightforward, but the dynamics shift when it comes to network play. To achieve this, we need to employ a similar approach to what we do locally by linking character movements to those of the flying boat. However, network synchronization information is not as consistent as it is locally, which can result in a significant loss of data.
+											</p>
+											<p style="margin: 9px 0 0 0; text-align: justify;">
+												One can mitigate this loss of information by extrapolating the movement of an object between two synchronization points, effectively filling in the gaps. However, the challenge lies in the fact that players are already moving using this synchronization method, making it difficult to introduce a second method of translation, especially if it doesn't match the speed of the first one. Since these two sets of information do not arrive simultaneously, the two movements cannot be synchronized. As a result of the delayed arrival of information, a slight, bothersome lag occurs for the player.
+											</p>
+											<p style="margin: 9px 0 0 0; text-align: justify;">
+												To address this issue, I developed a method that involves synchronizing the ship's movement locally with that of all players. This approach eliminates problems related to latency-induced delays. However, its implementation poses another challenge. Not all players activate this feature simultaneously, which can lead to synchronization issues. To overcome this, I implemented a mechanism where all players resynchronize their ships with the most recent version. This abrupt resynchronization ensures that all players agree on the ship's position. Nevertheless, errors may occur in case of packet loss related to internet connectivity, resulting in ship teleportations.
+											</p>
 										</section>
 									</article>
 

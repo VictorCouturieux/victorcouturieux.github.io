@@ -72,7 +72,10 @@
 								<header class="text-center" style="margin: 0 0 0 0">
 									<p style="margin: -1.4em 0 0 0;">Octobre, 2022</p>
 									<h2>ASCII LEMMINGS</h2>
-									<!--p style="font-size: 1.8em;">ttt</p-->
+									<p>A homemade 2D game engine in the Windows Command Prompt.</p>
+									<div class="video-container" >
+										<iframe width="860" height="512" src="https://www.youtube.com/embed/QesRloa4Ve4?si=pfrBTK8RhM_y-bU9" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+									</div>
 								</header>
 								<!--a href="#" class="image item-center"><img src="images/adelia_rush/adelia_rush.png" alt="" /></a-->
 							</article>
@@ -84,45 +87,32 @@
 										<section>
 											<header>
 												<p style="margin: -0.9em 0 0 0;">WebPage Under Construction</p>
-												<h2>Developpment</h2>
+												<h2>Project Origine</h2>
 											</header>
-											<p>
-												Vestibulum scelerisque ultricies libero id hendrerit. Vivamus malesuada quam faucibus ante dignissim auctor
-												hendrerit libero placerat. Nulla facilisi. Proin aliquam felis non arcu molestie at accumsan turpis commodo.
-												Proin elementum, nibh non egestas sodales, augue quam aliquet est, id egestas diam justo adipiscing ante.
-												Pellentesque tempus nulla non urna eleifend ut ultrices nisi faucibus.
+											<p style="margin: 0 0.9em 0 0;">
+												This game was developed by a programmer duo as part of an exercise to create a video game using ASCII characters exclusively within the Windows command prompt. This project was immensely educational and enabled me to become well-versed in the C++ language while thoroughly enjoying the process of reimagining "The Lemmings" game.
 											</p>
-											<blockquote>
-												Praesent a dolor leo. Duis in felis in tortor lobortis volutpat et pretium tellus. Vestibulum ac ante nisl,
-												a elementum odio. Duis semper risus et lectus commodo fringilla. Maecenas sagittis convallis justo vel mattis.
-												placerat, nunc diam iaculis massa, et aliquet nibh leo non nisl vitae porta lobortis, enim neque fringilla nunc,
-												eget faucibus lacus sem quis nunc suspendisse nec lectus sit amet augue rutrum vulputate ut ut mi. Aenean
-												elementum, mi sit amet porttitor lorem ipsum dolor sit amet, consectetur adipiscing elit. Lorem ipsum dolor
-												sit amet nullam consequat feugiat dolore tempus.
-											</blockquote>
-										</section>
-										<section>
-											<header>
-												<h3 style="margin: -0.9em 0 0 0;">Something else</h3>
-											</header>
-											<p>
-												Elementum odio duis semper risus et lectus commodo fringilla. Maecenas sagittis convallis justo vel mattis.
-												placerat, nunc diam iaculis massa, et aliquet nibh leo non nisl vitae porta lobortis, enim neque fringilla nunc,
-												eget faucibus lacus sem quis nunc suspendisse nec lectus sit amet augue rutrum vulputate ut ut mi. Aenean
-												elementum, mi sit amet porttitor lorem ipsum dolor sit amet, consectetur adipiscing elit. Lorem ipsum dolor
-												sit amet nullam consequat feugiat dolore tempus.
+											<p style="margin: 0 0 0 0;"><a href="https://github.com/Pierrhum/Project_Lemmings">Github Project Content</a></p>
+											<h3 style="margin: 1em 0 0 0;">My experience with The ASCII Lemmings</h3>
+											<p style="margin: 0.5em 0 0 0;">
+												To create a pixel art-like representation, we used the Unicode character 0x259F "▀" for all the characters in our Windows command prompt. Additionally, since the Windows command prompt only supports 16 colors, we needed to devise a method for encoding these colors.
 											</p>
-											<ul>
-												<li>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Necessitatibus!</li>
-												<li>Laboriosam, aliquam totam asperiores nam velit voluptatum non quidem.</li>
-												<li>Voluptatem, libero quia voluptatum ab modi facere dolore assumenda?</li>
-												<li>Expedita, officia tenetur doloremque nulla temporibus ab voluptates adipisci.</li>
-												<li>Nostrum, nesciunt, inventore amet temporibus officia perferendis doloremque nulla.</li>
-												<li>Dolorum, ex earum maiores perspiciatis modi sequi odit mollitia.</li>
+											<p style="margin: 0.5em 0 0 0;">
+												Nous avons donc commencé a faire l'enssemble des outils nessaissaire au developpement du jeu comme :</p>
+											<ul style="margin: 0 0 0 0;">
+												<li style="margin: 0 0 0 0;">Display a pixel;</li>
+												<li style="margin: 0 0 0 0;">Display an picture from a file source;</li>
+												<li style="margin: 0 0 0 0;">Play 2D animations from files;</li>
+												<li style="margin: 0 0 0 0;">Lemmings behavior (animation, movement, state);</li>
+												<li style="margin: 0 0 0 0;">Mouse input detection on the interface;</li>
+												<li style="margin: 0 0 0 0;">Collision management using "Flag" on pixels;</li>
+												<li style="margin: 0 0 0 0;">Game loop (winning, losing).</li>
 											</ul>
+											<p style="margin: 0.5em 0 0 0;">
+												To integrate the game's images and animations, we retrieved archives found on the Internet and resized them to fit our screen size. Then, to adjust the original colors to the 16-color limit of our interface, we used a Python script to convert our images into our specific format. This slightly altered the color rendering, but it worked satisfactorily.
+											</p>
 										</section>
 									</article>
-
 							</div>
 							<div class="col-4 col-12-medium">
 
