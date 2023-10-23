@@ -72,7 +72,10 @@
 								<header class="text-center" style="margin: 0 0 0 0">
 									<p style="margin: -1.4em 0 0 0;">March, 2023</p>
 									<h2>MINECRAFT OPENGL</h2>
-									<!--p style="font-size: 1.8em;">ttt</p-->
+									<p style="font-size: 1.8em;">Minecraft made in C++ with GLSL for shaders using a minimalist engine</p>
+									<div class="video-container" >
+										<iframe width="860" height="512" src="https://www.youtube.com/embed/iRb4MZI_QTM?si=mPKrYXV-C20CD3bV" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+									</div>
 								</header>
 								<!--a href="#" class="image item-center"><img src="images/adelia_rush/adelia_rush.png" alt="" /></a-->
 							</article>
@@ -83,59 +86,69 @@
 									<article class="box">
 										<section>
 											<header>
-												<p style="margin: -0.9em 0 0 0;">WebPage Under Construction</p>
-												<h2>Developpment</h2>
+												<!--p style="margin: -0.9em 0 0 0;">WebPage Under Construction</p-->
+												<h2>Context</h2>
 											</header>
-											<p>
-												Vestibulum scelerisque ultricies libero id hendrerit. Vivamus malesuada quam faucibus ante dignissim auctor
-												hendrerit libero placerat. Nulla facilisi. Proin aliquam felis non arcu molestie at accumsan turpis commodo.
-												Proin elementum, nibh non egestas sodales, augue quam aliquet est, id egestas diam justo adipiscing ante.
-												Pellentesque tempus nulla non urna eleifend ut ultrices nisi faucibus.
+											<p style="margin: 0 0 0 0">
+												This project is a study of a game engine using OpenGL technology as part of my education at CNAM ENJMIN. It involved using a basic engine provided by the professor and learning how to utilize it. The primary goal was to become familiar with working with a custom game engine, as might be encountered in a video game development company. Additionally, it provided an opportunity to delve into GLSL shader design.
 											</p>
-											<blockquote>
-												Praesent a dolor leo. Duis in felis in tortor lobortis volutpat et pretium tellus. Vestibulum ac ante nisl,
-												a elementum odio. Duis semper risus et lectus commodo fringilla. Maecenas sagittis convallis justo vel mattis.
-												placerat, nunc diam iaculis massa, et aliquet nibh leo non nisl vitae porta lobortis, enim neque fringilla nunc,
-												eget faucibus lacus sem quis nunc suspendisse nec lectus sit amet augue rutrum vulputate ut ut mi. Aenean
-												elementum, mi sit amet porttitor lorem ipsum dolor sit amet, consectetur adipiscing elit. Lorem ipsum dolor
-												sit amet nullam consequat feugiat dolore tempus.
-											</blockquote>
-										</section>
-										<section>
-											<header>
-												<h3 style="margin: -0.9em 0 0 0;">Something else</h3>
-											</header>
-											<p>
-												Elementum odio duis semper risus et lectus commodo fringilla. Maecenas sagittis convallis justo vel mattis.
-												placerat, nunc diam iaculis massa, et aliquet nibh leo non nisl vitae porta lobortis, enim neque fringilla nunc,
-												eget faucibus lacus sem quis nunc suspendisse nec lectus sit amet augue rutrum vulputate ut ut mi. Aenean
-												elementum, mi sit amet porttitor lorem ipsum dolor sit amet, consectetur adipiscing elit. Lorem ipsum dolor
-												sit amet nullam consequat feugiat dolore tempus.
+											<p style="margin: 0 0 0 0;"><a target="_blank" href="https://github.com/VictorCouturieux/MinecraftEngineOpenGL">Github Project Content</a></p>
+											<p style="margin: 1em 0 0 0">
+												As part of this course, we also practiced procedural generation in a voxel environment and experimented with various lighting behaviors using different shaders in a 3D space.
 											</p>
-											<ul>
-												<li>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Necessitatibus!</li>
-												<li>Laboriosam, aliquam totam asperiores nam velit voluptatum non quidem.</li>
-												<li>Voluptatem, libero quia voluptatum ab modi facere dolore assumenda?</li>
-												<li>Expedita, officia tenetur doloremque nulla temporibus ab voluptates adipisci.</li>
-												<li>Nostrum, nesciunt, inventore amet temporibus officia perferendis doloremque nulla.</li>
-												<li>Dolorum, ex earum maiores perspiciatis modi sequi odit mollitia.</li>
-											</ul>
 										</section>
 									</article>
+									<article class="box">
+										<section>
+											<header>
+												<h2 style="margin: -0.9em 0 0 0;">Developpement</h2>
+											</header>
+											<h3 style="margin: 1em 0 0 0;">Shadow map (Shaders)</h3>
+											<p style="margin: 0 0 0 0">
+												Shadow maps have always been a somewhat obscure concept for me, and I was hesitant to delve into them. However, during this project, I had the opportunity to explore their complexities with fellow students who patiently explained their workings to me. This allowed me to grasp the intricacies of designing a shadow map system. Additionally, I also used the tutorial below to further enhance my understanding.
+											</p>
+											<p style="margin: 0 0 0 0" >
+												<a target="_blank" href="https://www.opengl-tutorial.org/fr/intermediate-tutorials/tutorial-16-shadow-mapping/">Tutorial Shadow mapping</a>
+											</p>
+											<p style="margin: 0 0 0 0">
+												I will probably create a summary of what I've understood about the creation of Shadow Maps on this web page later.
+											</p>
 
+											<h3 style="margin: 1em 0 0 0;">Importing *.obj files and RenderDoc compatibility</h3>
+											<p style="margin: 0 0 0 0">
+												 Cette partie étais l'ocasion de tester la recuperation des donnée d'un fichier *.obj pour ensuite pouvoir analiser sont comntenu. ce qui n'étais vraiment pas tres compliqué. 
+											</p>
+											<p style="margin: 0 0 0 0">
+												Regarding compatibility with RenderDoc, it was necessary to revise the C++ methods used, as some of them on the engine provided by the professor were not compatible. That's why we had to review and adjust the C++ code of the entire engine. This exercise allowed me to delve deeply into the engine's inner workings and learn more about it.
+											</p>
+											<button class="button alt toggle-button" data-target="hiddenContainer1" data-word="Engine Sceen" style="font-size: 0.9em; margin: 6px 0 0;">Show Engine Sceen ▶</button> 
+											<div class="hidden-container" id="hiddenContainer1">
+												<p class="text-center" style="display: flex; margin: 6px 0 0 0;">
+													<img style="height: auto;max-width: 100%;" src="images\minicraft\minicraft_anim.gif">
+												</p>
+											</div>
+											<p style="margin: 0.8em 0 0 0">
+												Obj Using :
+											</p>
+											<p style="margin: 0 0 0 0" ><a target="_blank"  href="files\simple_cube.obj">simple_cube.obj</a></p>
+											<p style="margin: 0 0 0 0" ><a target="_blank"  href="files\suzanne.obj">suzanne.obj</a></p>
+										</section>
 							</div>
 							<div class="col-4 col-12-medium">
 
 								<!-- Sidebar -->
 									<section class="box">
-										<!-- p class="item-center" ><img src="images/rnd_forest/expl2.png" alt="Click to Enlarge" class="clickable-image" data-image="images/rnd_forest/expl2.png"></p>
+										<p class="item-center" ><img src="images/minicraft/minicraft1.png" alt="Click to Enlarge" class="clickable-image" data-image="images/minicraft/minicraft1.png"></p>
+										<p class="item-center" ><img src="images/minicraft/minicraft2.png" alt="Click to Enlarge" class="clickable-image" data-image="images/minicraft/minicraft2.png"></p>
+										<p class="item-center" ><img src="images/minicraft/minicraft3.png" alt="Click to Enlarge" class="clickable-image" data-image="images/minicraft/minicraft3.png"></p>
+										<p class="item-center" ><img src="images/minicraft/minicraft4.png" alt="Click to Enlarge" class="clickable-image" data-image="images/minicraft/minicraft4.png"></p>
 									</section>
 									<div id="modal" class="modal">
 									    <div class="modal-content">
 											<span class="close" id="close">&times;</span>
-											<img id="modal-image" src="images/rnd_forest/expl2.png" alt="Enlarged Image" class="modal-image">
+											<img id="modal-image" src="images/minicraft/minicraft1.png" alt="Enlarged Image" class="modal-image">
 										</div>
-									</div-->
+									</div>
 							</div>
 						</div>
 					</div>
