@@ -74,18 +74,18 @@
 									<header>
 										<h2>Leave a Reply</h2>
 									</header>
-									<form action="" method="post" id="commentform" class="">
+									<form target="_blank" action="https://formsubmit.co/victor.couturieux@gmail.com" method="POST">
 										<div>
 											<label style="font-size: 1.4em; margin: 0 0 0 0;" for="inputName">Name</label>
-											<input type="text" class="form-control" id="inputName" placeholder="Enter your name">
+											<input type="text" name="name" class="form-control" placeholder="Full Name" required>
 										</div>
 										<div>
 											<label style="font-size: 1.4em; margin: 0.75em 0 0 0;" for="inputEmail">Email address</label>
-											<input type="text" class="form-control" id="inputEmail" placeholder="Enter your name">
+											<input type="email" name="email" class="form-control" placeholder="Email Address" required>
 										</div>
 										<div>
 											<label style="font-size: 1.4em; margin: 0.75em 0 0 0;" for="inputComment">Comment</label>
-											<textarea class="form-control" rows="6"></textarea>
+											<textarea placeholder="Your Message" class="form-control" name="message" rows="10" required></textarea>
 										</div>
 										<div class="text-right" style="margin: 0.75em 0 0 0;">
 		  									<button type="submit">Submit</button>
